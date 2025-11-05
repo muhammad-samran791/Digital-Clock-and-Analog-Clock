@@ -157,3 +157,7 @@ footer {
   background: rgb(15, 15, 15);
   color: white;
 }
+
+footer p {
+  text-align: center;
+}
