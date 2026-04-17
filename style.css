@@ -22,8 +22,8 @@ main {
 }
 
 .clock {
-  width: 350px;
-  height: 350px;
+  width: 500px;
+  height: 500px;
   border: 8px solid rgb(36, 36, 36);
   background: rgb(15, 15, 15);
   box-shadow:
@@ -85,7 +85,7 @@ main {
 
 .analog-clock-date {
   position: absolute;
-  top: 70%;
+  top: 65%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -96,31 +96,28 @@ main {
   text-align: center;
 }
 
-.second-needle {
-  width: 3px;
-  height: 120px;
-  background-color: red;
+.needle {
   position: absolute;
   bottom: 50%;
   transform-origin: bottom center;
+}
+
+.second-needle {
+  width: 5px;
+  height: 200px;
+  background-color: red;
 }
 
 .minut-needle {
-  width: 3px;
-  height: 100px;
+  width: 5px;
+  height: 150px;
   background-color: white;
-  position: absolute;
-  bottom: 50%;
-  transform-origin: bottom center;
 }
 
 .hour-needle {
-  width: 3px;
-  height: 70px;
+  width: 5px;
+  height: 100px;
   background-color: blue;
-  position: absolute;
-  bottom: 50%;
-  transform-origin: bottom center;
 }
 
 .center-point {
@@ -140,22 +137,24 @@ main {
   border-radius: 15px;
   font-family: "DS-Digital", sans-serif;
   color: white;
-  padding: 3em 5em;
+  padding: 2em 3em;
 }
 
 .date-container {
   display: flex;
   justify-content: center;
   column-gap: 5%;
+  font-size: 1.5rem;
 }
 
 .time-container {
-  font-size: 2.5em;
   display: flex;
+  font-size: 4rem;
   font-weight: bold;
 }
 
 .day-container {
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -163,7 +162,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 0em;
+  padding: 1em 1em;
   width: 100%;
   position: fixed;
   font-size: 1rem;
@@ -173,21 +172,42 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 850px) and (orientation: portrait) {
-  html,
-  body {
-    font-size: 110%;
-  }
-}
-
 @media (max-width: 450px) and (orientation: portrait) {
-  html,
-  body {
-    font-size: 90%;
-  }
-
   main {
     flex-direction: column;
     row-gap: 5%;
+  }
+
+  .clock {
+    width: 380px;
+    height: 380px;
+  }
+
+  .second-needle {
+    height: 150px;
+  }
+
+  .minut-needle {
+    height: 100px;
+  }
+
+  .hour-needle {
+    height: 80px;
+  }
+
+  .digital-clock {
+    padding: 1em 2em;
+  }
+
+  .date-container {
+    font-size: 1.2rem;
+  }
+
+  .time-container {
+    font-size: 2.5rem;
+  }
+
+  .day-container {
+    font-size: 1.2rem;
   }
 }
