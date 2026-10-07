@@ -33,16 +33,13 @@ function updateClock() {
   let clockHour = clockTime.getHours();
 
   let secondDegree = (clockSecond + 1) * 6;
-  document.getElementById("second-needle").style.transform =
-    `rotate(${secondDegree}deg)`;
+  document.getElementById("second-needle").style.transform = `rotate(${secondDegree}deg)`;
 
   let minutDegree = clockMinute * 6 + clockSecond * 0.1;
-  document.getElementById("minut-needle").style.transform =
-    `rotate(${minutDegree}deg)`;
+  document.getElementById("minut-needle").style.transform = `rotate(${minutDegree}deg)`;
 
   let hourDegree = (clockHour % 12) * 30 + clockMinute * 0.5;
-  document.getElementById("hour-needle").style.transform =
-    `rotate(${hourDegree}deg)`;
+  document.getElementById("hour-needle").style.transform = `rotate(${hourDegree}deg)`;
 
   let month = clockTime.getMonth();
   let monthName = monthList[month];
